@@ -4,7 +4,7 @@ import { DEFAULT_THEME } from "./defaults";
 
 export type OnDateSelect =
   | undefined
-  | ((date: Date, options: { isSelected: boolean }) => void);
+  | ((date: Date, options: { isSelected: boolean, isActive:boolean }) => void);
 
 export type DayComponentType = (props: {
   date: Date;
@@ -32,6 +32,20 @@ export type CalendarPageInterpolator = (
   params: CalendarPageInterpolatorParams
 ) => ReturnType<typeof useAnimatedStyle>;
 
+export type MarkedDateType = {
+  startingDay?: boolean;
+  endingDay?: boolean;
+  color?: string;
+  textColor?: string;
+  backgroundColor?: string;
+  selected?: boolean;
+};
+
+export type MarkedDatesObject =
+    {
+      [key: string]: MarkedDateType;
+    } | undefined;
+
 export type CalendarProps = {
   selectedDate?: Date | null; // TODO: suppoort multiple selected dates (likely using a Set())
   onDateSelect?: OnDateSelect;
@@ -49,6 +63,8 @@ export type CalendarProps = {
   monthAnimCallbackNode?: Animated.SharedValue<number>;
   gesturesDisabled?: boolean;
   animationConfig?: Partial<Animated.WithSpringConfig>;
+  markedDates?: MarkedDatesObject;
+  markingType?: "period" | "daily"
 };
 
 export type DayProps = {
@@ -60,12 +76,15 @@ export type DayProps = {
   onDateSelect?: OnDateSelect;
   theme: typeof DEFAULT_THEME;
   dateFormatted: string;
+  isActive:boolean;
+  markedDate: MarkedDateType
 };
 
 export type DayWrapperProps = {
   isInDisplayedMonth: boolean;
   date: Date;
   dateFormatted: string;
+  isActive:boolean;
 };
 
 export type CalendarPageInterpolatorParams = PageInterpolatorParams & {

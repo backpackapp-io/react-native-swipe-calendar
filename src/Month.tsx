@@ -12,7 +12,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { useCalendarContext } from "./context";
 import { DayWrapper } from "./Day";
 
-export const MonthPage = React.memo(({ index }: { index: number }) => {
+export const MonthPage = React.memo(({ index, isActive }: { index: number, isActive:boolean }) => {
   const { referenceDate, HeaderComponent, DayLabelComponent, theme } =
     useCalendarContext();
   const firstDayOfMonth = useMemo(
@@ -104,6 +104,7 @@ export const MonthPage = React.memo(({ index }: { index: number }) => {
                       isInDisplayedMonth={sameMonth}
                       date={day}
                       dateFormatted={dayDateFormatted}
+                      isActive={isActive}
                     />
                   );
                 })}

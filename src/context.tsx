@@ -4,6 +4,7 @@ import {
   DayComponentType,
   DayLabelComponentType,
   HeaderComponentType,
+  MarkedDatesObject,
   OnDateSelect,
 } from "./types";
 
@@ -16,6 +17,8 @@ export const CalendarContext = React.createContext({
   HeaderComponent: undefined as HeaderComponentType | undefined,
   theme: DEFAULT_THEME,
   pageInterpolator: defaultPageInterpolator,
+  markingType: "daily" as "daily" | "period" | undefined,
+  markedDates: {} as MarkedDatesObject
 });
 
 export function useCalendarContext() {
