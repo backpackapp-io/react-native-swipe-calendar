@@ -5312,7 +5312,7 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-builder-bob@^0.18.1:
+react-native-builder-bob@^0.18.2:
   version "0.18.2"
   resolved "https://registry.yarnpkg.com/react-native-builder-bob/-/react-native-builder-bob-0.18.2.tgz#e3a96abe3ead84b167c1c1ea97747ef8ffc2a9f4"
   integrity sha512-HA7ryoG99tkWh92s7Qb/619qAAfa3TMAKP4Q5l/smqZQwnJ77z5ESiPgRZl8gQMiCnrmmPVb/c5yUscKOL9GdQ==

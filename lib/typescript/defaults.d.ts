@@ -1,0 +1,26 @@
+import { useAnimatedStyle } from "react-native-reanimated";
+import { CalendarPageInterpolatorParams } from "./types";
+declare type TextTransform = "uppercase" | "lowercase" | "capitalize" | "none";
+export declare const DEFAULT_THEME: {
+    todayIndicatorDotColor: string;
+    selectedDayBackgroundColor: string;
+    selectedDayFontColor: string;
+    headerFontFamily: string;
+    headerFontColor: string;
+    headerFontSize: number;
+    headerTextTransform: TextTransform;
+    headerDateFormat: string;
+    dayLabelFontFamily: string;
+    dayLabelColor: string;
+    dayLabelFontSize: number;
+    dayLabelTextTransform: TextTransform;
+    dayLabelDateFormat: string;
+    dayFontFamily: string;
+    dayFontColor: string;
+    dayInactiveFontColor: string;
+    daySelectedFontColor: string;
+    dayFontSize: number;
+    inactiveOpacity: number;
+};
+export declare function defaultPageInterpolator({ focusAnim, theme, pageWidth, }: CalendarPageInterpolatorParams): ReturnType<typeof useAnimatedStyle>;
+export {};
